@@ -1,0 +1,5 @@
+server:
+  port: 8001
+mongodb:
+  uri: mongodb://admin:admin@localhost:30332/admin?readPreference=primaryPreferred
+  database: blue-mongodb
