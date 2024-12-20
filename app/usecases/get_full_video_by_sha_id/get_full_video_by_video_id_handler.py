@@ -1,16 +1,8 @@
 import base64
 
 import pymongo
-from fastapi import APIRouter
 
 from configuration.database_connection import MongoConnection
-
-router = APIRouter()
-
-
-@router.get("/collector/videos/")
-async def collect_video_by_sha_id(sha_id: str):
-    return await get_full_video_by_sha_id(sha_id=sha_id)
 
 
 async def get_full_video_by_sha_id(sha_id: str):
