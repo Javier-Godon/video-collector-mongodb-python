@@ -32,7 +32,7 @@ async def main():
         )
 
         # Build the Docker image using Dagger and Dockerfile
-        repo_url = "https://github.com/Javier-Godon/kafka-video-consumer-mongodb-python"
+        repo_url = "https://github.com/Javier-Godon/video-collector-mongodb-python"
         git_repo = dag.git(repo_url)
         branch = git_repo.branch("main")
         latest_commit = await branch.commit()  # Get the latest commit SHA
@@ -52,7 +52,7 @@ async def main():
         short_sha = latest_commit[:7]  # Shorten commit hash for tagging
         timestamp = datetime.now().strftime("%Y%m%dT%H%M")
         image_tag = f"{short_sha}-{timestamp}"
-        image_address = f"ghcr.io/{username.lower()}/kafka-video-consumer-mongodb-python:{image_tag}"
+        image_address = f"ghcr.io/{username.lower()}/video-collector-mongodb-python:{image_tag}"
 
         address = await build_image.with_registry_auth(
             "ghcr.io", username, password
@@ -68,7 +68,7 @@ async def main():
         }
 
         payload = {
-            "event_type": "image-tag-in-kafka-video-consumer-mongodb-python-dev-updated",
+            "event_type": "image-tag-in-video-collector-mongodb-python-dev-updated",
             "client_payload": {
                 "image_tag": image_tag
             }

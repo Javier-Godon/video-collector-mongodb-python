@@ -2,7 +2,7 @@ import base64
 
 import pymongo
 
-from configuration.database_connection import MongoConnection
+from app.configuration.database_connection import MongoConnection
 
 
 async def get_full_video_by_sha_id(sha_id: str):

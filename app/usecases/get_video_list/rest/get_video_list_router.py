@@ -1,9 +1,9 @@
 from fastapi import APIRouter
 
-from src.usecases.get_video_list.get_video_list_handler import get_video_list
-from src.usecases.get_video_list.get_video_list_query import GetVideoListQuery
-from src.usecases.get_video_list.rest.get_video_list_request import GetVideoListRequest
-from src.usecases.get_video_list.rest.video_detail_response import VideoDetailResponse
+from app.usecases.get_video_list.get_video_list_handler import get_video_list
+from app.usecases.get_video_list.get_video_list_query import GetVideoListQuery
+from app.usecases.get_video_list.rest.get_video_list_request import GetVideoListRequest
+from app.usecases.get_video_list.rest.video_detail_response import VideoDetailResponse
 
 router = APIRouter()
 

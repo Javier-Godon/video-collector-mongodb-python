@@ -1,5 +1,5 @@
-from configuration.database_connection import MongoConnection
-from src.usecases.get_video_list.get_video_list_query import GetVideoListQuery
+from app.configuration.database_connection import MongoConnection
+from app.usecases.get_video_list.get_video_list_query import GetVideoListQuery
 
 
 async def get_video_list(get_video_list_query: GetVideoListQuery) -> list:

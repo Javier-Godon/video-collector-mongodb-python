@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.usecases.get_full_video_by_sha_id.get_full_video_by_video_id_handler import get_full_video_by_sha_id
+from app.usecases.get_full_video_by_sha_id.get_full_video_by_video_id_handler import get_full_video_by_sha_id
 
 router = APIRouter()
 
