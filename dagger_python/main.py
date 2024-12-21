@@ -75,6 +75,7 @@ async def main():
         }
 
         response = requests.post(dispatch_url, json=payload, headers=headers)
+
         if response.status_code == 204:
             print("GitHub Action triggered successfully")
         else:
